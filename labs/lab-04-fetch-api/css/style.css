@@ -1,0 +1,288 @@
+/* ================================
+   SEU Tech Event Page - Stylesheet
+   ================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f7fb;
+}
+
+a {
+    color: #0b3d91;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: #0b3d91;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Main sections ---------- */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #0b3d91;
+    border-bottom: 3px solid #4fa3ff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    color: #1565c0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+section img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+
+/* ---------- Highlight box (div / span demo) ---------- */
+.highlight-box {
+    background-color: #eaf2ff;
+    border-left: 5px solid #0b3d91;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.highlight {
+    color: #d64545;
+    font-weight: bold;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+ul ul {
+    margin-top: 8px;
+}
+
+/* ---------- Table ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #0b3d91;
+}
+
+th, td {
+    border: 1px solid #cfd8e3;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #0b3d91;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f7fb;
+}
+
+/* ---------- Form ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    margin-top: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"] {
+    padding: 8px 10px;
+    border: 1px solid #cfd8e3;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: 1px solid #cfd8e3;
+    border-radius: 6px;
+    padding: 12px 16px;
+}
+
+legend {
+    font-weight: bold;
+    color: #0b3d91;
+    padding: 0 6px;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+button {
+    background-color: #0b3d91;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #0b3d91;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+}
+
+footer a {
+    color: #a9c8ff;
+}
+
+/* ---------- Lab 03: JavaScript output areas ---------- */
+.js-action {
+    margin: 18px 0;
+}
+
+section p.js-output {
+    margin: 8px 0 0;
+    padding: 8px 12px;
+    background-color: #eaf2ff;
+    border-left: 4px solid #4fa3ff;
+    border-radius: 4px;
+}
+
+/* Keep the greeting area hidden until JavaScript writes text into it */
+section p.js-output:empty {
+    display: none;
+}
+
+/* ---------- Lab 04: Select list, JSON output and saved data ---------- */
+.form-group select {
+    padding: 8px 10px;
+    border: 1px solid #cfd8e3;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+pre {
+    padding: 12px 16px;
+    background-color: #0f1c33;
+    color: #a9f5c4;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button.secondary {
+    background-color: #ffffff;
+    color: #0b3d91;
+    border: 2px solid #0b3d91;
+}
+
+button.secondary:hover {
+    background-color: #eaf2ff;
+}
+
+/* ---------- Lab 05: Loaded workshop details ---------- */
+#workshop-details .details th {
+    width: 22%;
+}

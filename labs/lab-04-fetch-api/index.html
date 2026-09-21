@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEU Tech Event Information and Registration Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+        <div class="logo-area">
+            <span class="logo-icon">💻</span>
+            <h1>SEU Tech Fest 2026</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#workshop-details">Workshop</a></li>
+                <li><a href="#saved-registration">Saved Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main>
+
+        <!-- SECTION 1: ABOUT THE EVENT -->
+        <section id="about">
+            <h2>About the Event</h2>
+
+            <img src="assets/images/event-banner.svg"
+                 alt="Two students working on laptops beside a large screen displaying HTML code, representing the SEU Tech Fest">
+
+            <p>
+                SEU Tech Fest 2026 is a university-wide technology event organised by the
+                Department of Computer Science and Engineering at Southeast University (SEU).
+                The event brings together students from every department to explore
+                programming, robotics, web development, and emerging technologies through
+                friendly competitions, workshops, and exhibitions.
+            </p>
+
+            <h3>Goals of the Event</h3>
+            <p>
+                The main goal of SEU Tech Fest is to encourage students to apply classroom
+                knowledge to real-world problems. The event also aims to build teamwork,
+                improve problem-solving skills, and create a platform where students can
+                showcase their projects to faculty members, industry professionals, and peers.
+            </p>
+
+            <h3>Who Can Participate</h3>
+            <p>
+                The event is open to all currently enrolled SEU students, regardless of
+                department or semester. Participants can join individually for the
+                programming contest or form teams of up to four members for the project
+                showcase and hackathon segments.
+            </p>
+
+            <div class="highlight-box">
+                <p>Event Date: <span class="highlight">15 September 2026</span></p>
+                <p>Venue: <span class="highlight">SEU Auditorium, Eskaton Garden Road, Dhaka</span></p>
+                <p>Registration Deadline: <span class="highlight">05 September 2026</span></p>
+            </div>
+
+            <!-- LAB 03: Interaction 1 - Registration status -->
+            <div class="js-action">
+                <button type="button" onclick="checkRegistration()">
+                    Check Registration Status
+                </button>
+                <p id="registrationStatus" class="js-output">Click the button to check the status.</p>
+            </div>
+
+            <!-- LAB 03: Interaction 2 - Seat availability -->
+            <div class="js-action">
+                <button type="button" onclick="checkSeats()">
+                    Check Seat Availability
+                </button>
+                <p id="seatMessage" class="js-output">Seat information will appear here.</p>
+            </div>
+        </section>
+
+        <!-- LAB 05: Workshop details loaded with fetch() from data/workshop.json -->
+        <section id="workshop-details">
+            <h2>Workshop Details</h2>
+            <p>Click the button to load the workshop information from the server.</p>
+
+            <button type="button" onclick="loadWorkshop()">
+                Load Workshop Details
+            </button>
+
+            <table class="details">
+                <tr>
+                    <th>Title</th>
+                    <td><span id="workshopTitle">Not loaded</span></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td><span id="workshopDate">Not loaded</span></td>
+                </tr>
+                <tr>
+                    <th>Venue</th>
+                    <td><span id="workshopVenue">Not loaded</span></td>
+                </tr>
+                <tr>
+                    <th>Seats</th>
+                    <td><span id="workshopSeats">Not loaded</span></td>
+                </tr>
+                <tr>
+                    <th>Instructor</th>
+                    <td><span id="workshopInstructor">Not loaded</span></td>
+                </tr>
+                <tr>
+                    <th>Duration</th>
+                    <td><span id="workshopDuration">Not loaded</span></td>
+                </tr>
+            </table>
+
+            <p id="loadMessage" class="js-output"></p>
+        </section>
+
+        <!-- LAB 05: Public API practice using JSONPlaceholder -->
+        <section id="api-practice">
+            <h2>Public API Practice</h2>
+            <p>
+                This button requests one sample user from the JSONPlaceholder practice API.
+                It is only a Fetch exercise and is not part of the workshop data.
+            </p>
+
+            <button type="button" onclick="loadSampleUser()">
+                Load Sample User
+            </button>
+
+            <p id="apiUser" class="js-output">No API data loaded yet.</p>
+        </section>
+
+        <!-- SECTION 2: SCHEDULE AND PARTICIPATION -->
+        <section id="schedule">
+            <h2>Event Schedule &amp; Participation Details</h2>
+            <p>
+                The event runs for a full day and is divided into several segments so that
+                students with different interests can all find something useful to join.
+                Details of each segment and the steps required to participate are given below.
+            </p>
+
+            <h3>Event Segments</h3>
+            <ul>
+                <li>Competitive Programming Contest</li>
+                <li>Web Development Hackathon</li>
+                <li>Robotics and IoT Exhibition</li>
+                <li>Guest Seminar on Artificial Intelligence</li>
+            </ul>
+
+            <h3>Steps to Participate</h3>
+            <ol>
+                <li>Read the event rules published on the SEU CSE department notice board.</li>
+                <li>
+                    Prepare your entry before the deadline:
+                    <ul>
+                        <li>Choose your preferred segment (contest, hackathon, or exhibition).</li>
+                        <li>Form a team if the segment requires one.</li>
+                        <li>Prepare any required project files or ID documents.</li>
+                    </ul>
+                </li>
+                <li>Fill in the registration form on this page and submit it.</li>
+                <li>Collect your confirmation email and event ID card on the event day.</li>
+            </ol>
+
+            <h3>Full Day Schedule</h3>
+            <table>
+                <caption>SEU Tech Fest 2026 - Programme Schedule</caption>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 AM</td>
+                        <td>Registration &amp; Opening Ceremony</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>Competitive Programming Contest</td>
+                        <td>Computer Lab 1</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 PM</td>
+                        <td>Web Development Hackathon Begins</td>
+                        <td>Computer Lab 2</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM</td>
+                        <td>Robotics &amp; IoT Exhibition</td>
+                        <td>Innovation Hall</td>
+                    </tr>
+                    <tr>
+                        <td>04:00 PM</td>
+                        <td>Guest Seminar on Artificial Intelligence</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td>05:30 PM</td>
+                        <td>Prize Giving &amp; Closing Ceremony</td>
+                        <td>Main Auditorium</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- LAB 03: Independent improvement - Event day reminder -->
+            <div class="js-action">
+                <button type="button" onclick="showReminder()">
+                    Show Event Day Reminder
+                </button>
+                <p id="reminderMessage" class="js-output">Click the button to see a reminder for the event day.</p>
+            </div>
+
+            <p>
+                For more information about Southeast University, please visit the
+                <a href="https://www.seu.edu.bd" target="_blank" rel="noopener noreferrer">official SEU website</a>.
+            </p>
+        </section>
+
+        <!-- SECTION 3: REGISTRATION FORM -->
+        <section id="registration">
+            <h2>Registration</h2>
+            <p>
+                Interested students can register for SEU Tech Fest 2026 by filling out the
+                form below. Please provide accurate information so that we can contact you
+                with confirmation details.
+            </p>
+
+            <!-- LAB 04: Form now has an id so it can be identified -->
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required>
+
+                    <!-- LAB 03: Personal greeting -->
+                    <button type="button" onclick="showGreeting()">
+                        Show Greeting
+                    </button>
+                    <p id="greetingMessage" class="js-output"></p>
+                </div>
+
+                <!-- LAB 04: id changed from "studentid" to "studentId" -->
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" placeholder="Enter your SEU student ID" required>
+                </div>
+
+                <!-- LAB 04: id changed from "email" to "studentEmail" -->
+                <div class="form-group">
+                    <label for="studentEmail">Email Address</label>
+                    <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter your email address" required>
+                </div>
+
+                <!-- LAB 04: New workshop list (replaces the old pre-event workshop checkbox) -->
+                <div class="form-group">
+                    <label for="workshop">Pre-Event Workshop</label>
+                    <select id="workshop" name="workshop" required>
+                        <option value="">Select a workshop</option>
+                        <option value="HTML Basics">HTML Basics</option>
+                        <option value="CSS Basics">CSS Basics</option>
+                        <option value="JavaScript Basics">JavaScript Basics</option>
+                        <option value="Robotics and IoT Basics">Robotics and IoT Basics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Session Date</label>
+                    <input type="date" id="preferred-date" name="preferred-date">
+                </div>
+
+                <fieldset>
+                    <legend>Select Your Event Track</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="track-programming" name="track" value="Programming Contest" checked>
+                        <label for="track-programming">Programming Contest</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="track-hackathon" name="track" value="Web Development Hackathon">
+                        <label for="track-hackathon">Web Development Hackathon</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="track-robotics" name="track" value="Robotics and IoT Exhibition">
+                        <label for="track-robotics">Robotics and IoT Exhibition</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Options</legend>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tshirt" name="options" value="Event T-Shirt">
+                        <label for="tshirt">I would like an event T-shirt</label>
+                    </div>
+                </fieldset>
+
+                <!-- LAB 04: Register button runs JavaScript instead of submitting the form -->
+                <button type="button" onclick="submitRegistration()">Register</button>
+                <p id="formMessage" class="js-output"></p>
+            </form>
+        </section>
+
+        <!-- LAB 04: SECTION 4 - JSON OUTPUT -->
+        <section id="json-output">
+            <h2>JSON Output</h2>
+            <p>After a successful registration, the data is shown here as JSON text.</p>
+            <pre id="jsonOutput">No registration saved yet.</pre>
+        </section>
+
+        <!-- LAB 04: SECTION 5 - SAVED REGISTRATION -->
+        <section id="saved-registration">
+            <h2>Saved Registration</h2>
+            <p>The registration is saved in this browser using localStorage.</p>
+            <div class="button-row">
+                <button type="button" onclick="showSavedRegistration()">Show Saved Registration</button>
+                <button type="button" class="secondary" onclick="clearRegistration()">Clear Saved Registration</button>
+            </div>
+            <p id="savedMessage" class="js-output"></p>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <p>&copy; 2026 Southeast University Tech Club. All rights reserved.</p>
+        <p><a href="https://www.seu.edu.bd" target="_blank" rel="noopener noreferrer">www.seu.edu.bd</a></p>
+    </footer>
+
+    <!-- Connect the external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
